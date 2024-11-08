@@ -1,0 +1,14 @@
+services:
+
+  api:
+    image: api
+    build:
+      context: .
+      dockerfile: src/api/Dockerfile
+    networks:
+      - aspnetcoreapp-network
+
+networks:
+  aspnetcoreapp-network:
+    driver: bridge
+  
